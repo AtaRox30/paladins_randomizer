@@ -1,0 +1,209 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: 4s ease-in-out backgroundAni infinite alternate-reverse;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes backgroundAni {
+    from {
+        background-color: rgb(233, 100, 38);
+    }
+    to {
+        background-color: rgb(199, 77, 40);
+    }
+}
+
+#randomizer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 5vh;
+    background-color: rgb(172, 172, 172);
+    margin: 2vh 0;
+}
+
+#selected {
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 30%;
+    height: 70%;
+}
+
+#selected > p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+#selected img {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 3vh 0 0 0;
+}
+
+.button {
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 4vh;
+    margin: 0.2vh;
+    line-height: 4vh;
+    font-size: 2vh;
+    color: white;
+    -webkit-box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2); 
+    box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
+    background-color: rgb(199, 77, 40);
+    border-radius: 15vh;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: rgb(212, 28, 28);
+}
+
+#banned {
+    width: 70%;
+    height: 20vh;
+    position: relative;
+    border-radius: 5vh;
+    background-color: rgb(172, 172, 172);
+    left: 50%;
+    top: 1vh;
+    transform: translateX(-50%);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+
+#banned > p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+#banned-sub {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#banned img {
+    display: inline;
+    width: 10%;
+    position: relative;
+    margin: 3vh 0 0 0;
+}
+
+#banned img:hover {
+    cursor: pointer;
+}
+
+#banned-sub::-webkit-scrollbar {
+    height: 0.8vh;
+}
+
+#banned-sub::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#banned-sub::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 50vh;
+}
+
+#role {
+    width: 70%;
+    height: 20vh;
+    position: relative;
+    border-radius: 5vh;
+    background-color: rgb(172, 172, 172);
+    left: 50%;
+    top: 1vh;
+    transform: translateX(-50%);
+    /* display: flex; */
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+
+#sub-role {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    top: 1vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 90%;
+}
+
+#sub-role .item {
+    width: 15%;
+    height: 100%;
+    margin: 0 1vw;
+    background-color: #3b3b3b;
+}
+
+#sub-role .item:hover {
+    cursor: pointer;
+}
+
+#sub-role .tank {
+    background-image: url("../img/fl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#sub-role .damage {
+    background-image: url("../img/dmg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#sub-role .flank {
+    background-image: url("../img/fk.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#sub-role .support {
+    background-image: url("../img/supp.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#sub-role .item.selected {
+    border: 0.3vh solid red;
+}

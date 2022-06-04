@@ -142,6 +142,7 @@ $("#ban").on("click", function() {
 
 $("#banned-sub").on("click", function(e) {
     let img = e.target;
+    let champTxt = $("#selected p").text();
     for(let c of champions) {
         if(c.src == $(img).attr("src")) {
             available.push(c);
